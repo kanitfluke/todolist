@@ -1,0 +1,10 @@
+{
+    "name": "Todo List API",
+    "version": "0.1.0",
+    "description": "todo list API",
+    "title": "Todo list and Task API",
+    "template": {
+        "withCompare": true,
+        "withGenerator": true
+    }
+  }

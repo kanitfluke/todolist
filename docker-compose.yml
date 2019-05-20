@@ -1,0 +1,39 @@
+version: '3'
+services:
+  web:
+    image: todoapp:v1
+    volumes:
+      - ./app:/usr/app
+    working_dir: /usr/app
+    command: npm run start:dev
+    depends_on:
+      - db
+    environment:
+      WAIT_HOSTS: db:3306
+    ports:
+      - 8000:8000
+    networks:
+      todo_network:
+        ipv4_address: 10.10.0.2
+  db:
+    image: mysql:5.7
+    container_name: mysql5.7-container
+    ports:
+      - 3306:3306
+    volumes:
+      - ./dump.sql:/docker-entrypoint-initdb.d/dump.sql
+    environment:
+      MYSQL_ROOT_PASSWORD: 123456789
+      MYSQL_DATABASE: TODO
+      MYSQL_USER: user
+      MYSQL_PASSWORD: password
+    networks:
+      todo_network:
+        ipv4_address: 10.10.0.10
+
+networks:
+  todo_network:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 10.10.0.0/16
