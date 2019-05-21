@@ -10,6 +10,7 @@ services:
       - db
     environment:
       WAIT_HOSTS: db:3306
+      WAIT_HOSTS_TIMEOUT: 60
     ports:
       - 8000:8000
     networks:
