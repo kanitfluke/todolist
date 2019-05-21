@@ -6,5 +6,6 @@
     "template": {
         "withCompare": true,
         "withGenerator": true
-    }
+    },
+    "order": ["Todo","Task"]
   }

@@ -1,7 +1,7 @@
 version: '3'
 services:
   web:
-    image: todoapp:v1
+    build: .
     volumes:
       - ./app:/usr/app
     working_dir: /usr/app

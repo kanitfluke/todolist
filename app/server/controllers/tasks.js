@@ -19,7 +19,7 @@ module.exports = {
       }, {
         where: {id: req.params.task_id} 
       })
-      .then(task => res.send(204).send(task))
+      .then(task => res.send(200).send(task))
       .catch(error => res.status(400).send(error));
   },
   delete(req, res) {
@@ -27,7 +27,7 @@ module.exports = {
       .destroy({
         where: {id: req.params.task_id} 
       })
-      .then(task => res.status(204).send(task))
+      .then(task => res.status(204))
       .catch(error => res.status(400).send(error));
   },
   get(req, res) {
@@ -38,7 +38,7 @@ module.exports = {
         },
         attributes: {exclude: ['createdAt', 'updatedAt']}
       })
-      .then(task => res.status(201).send(task))
+      .then(task => res.status(200).send(task))
       .catch(error => res.status(400).send(error));
   },
   setStatus(req, res) {

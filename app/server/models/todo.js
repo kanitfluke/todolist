@@ -4,7 +4,10 @@ module.exports = (sequelize, DataTypes) => {
     title: {
       type: DataTypes.STRING,
       allowNull: false,
-    },    
+    },
+  },
+  {
+    timestamps: false
   }); 
   
   Todo.associate = function(models) {

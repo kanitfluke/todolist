@@ -17,6 +17,13 @@ module.exports = (sequelize, DataTypes) => {
     todo_id: {
       type: DataTypes.INTEGER,
       allowNull: false,
+    },
+  },
+  {
+    timestamps: false,
+    name: {
+      singular: "task",
+      plural: "tasks"
     }
   });
 
