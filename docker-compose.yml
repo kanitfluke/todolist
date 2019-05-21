@@ -5,7 +5,7 @@ services:
     volumes:
       - ./app:/usr/app
     working_dir: /usr/app
-    command: npm run start:dev
+    command: sh -c "/wait && npm run start:prod"
     depends_on:
       - db
     environment:
