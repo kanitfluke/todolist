@@ -13,6 +13,13 @@ Prerequisits
 Installation
 -----------
 
+Install dependency
+
+On "app/" directory run npm install
+```
+npm install
+```
+run docker-compose
 ```
 docker-compose up
 ```
