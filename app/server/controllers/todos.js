@@ -25,7 +25,7 @@ module.exports = {
       .destroy({
         where: {id: req.params.todo_id} 
       })
-      .then(todo => res.status(204))
+      .then(todo => res.status(204).send())
       .catch(error => res.status(400).send(error));
   },
   get(req, res) {

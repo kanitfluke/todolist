@@ -125,7 +125,7 @@ module.exports = (app) => {
    * @apiParam {String} task.status Status of a Task "pending" or "done"
    * 
    * @apiExample Example usage:
-   * curl -d "subject=tasksubject&detail=taskdetail&status=pending" -X http://localhost:8000/api/1/tasks/create
+   * curl -d "subject=tasksubject&detail=taskdetail&status=pending" -X POST http://localhost:8000/api/1/tasks/create
    * 
    * @apiSuccessExample {json} Success
    *    HTTP/1.1 200 OK
